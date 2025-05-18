@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+    href="style.css">
+    <script src="reset.js"></script>
+</head>
+<body>
+    <div class="reset-button-container">
+        <button id="resetAllBtn" class="reset-button" title="Reset all information">↻</button>
+    </div>
+
+    <div class="container">
+        <!--Left side-->
+        <div class="left-side">
+            <img src="profile-picture.jpg"
+            alt="profile-photo"
+            class="profile-photo">
+            <div class="contact-section">
+                <h2>CONTACT</h2>
+                <hr>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="phone">📞 Phone:</label>
+                        <input type="text" id="phone" class="icon" placeholder="Write your phone number" maxlength="20" required>
+                        <span class="error-message" id="phone-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">✉️ Email:</label>
+                        <input type="email" id="email" class="icon" placeholder="Write your email address" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">📍 Address:</label>
+                        <input type="text" id="address" class="icon" placeholder="Write your home address" maxlength="100" required>
+                        <span class="error-message" id="address-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="website">🌐 Website:</label>
+                        <input type="url" id="website" class="icon" placeholder="Write your website URL" required>
+                        <span class="error-message" id="website-error"></span>
+                    </div>
+                    <button type="submit">Save Contact</button>
+                </form>
+                <script src="contact.js"></script>
+            </div>
+            <div class="contact-section">
+                <h2>EDUCATION</h2>
+                <hr>
+                <div class="wrapper">
+                    <div id="survey_options">
+                        <input type="text" name="survey_options[]" class="survey_option" size="50" placeholder="Another Field">
+                    </div>
+                    <div class="controls">
+                        <a href="#" id="add_more_fields"><i class="fa fa-plus"></i>Add More</a>
+                        <a href="#" id="remove_fields"><i class="fa fa-minus"></i>Remove Field</a>
+                    </div>
+                    <script src="education.js"></script>
+                </div>
+            </div>
+            <div class="contact-section">
+                <h2>SKILLS</h2>
+                <hr>
+                <div class="wrapper">
+                    <div id="skills_options">
+                        <input type="text" name="skills_options[]" class="skills_option" size="50" placeholder="Another Field">
+                    </div>
+                    <div class="controls">
+                        <a href="#" id="addmore_fields"><i class="fa fa-plus"></i>Add More</a>
+                        <a href="#" id="removefields"><i class="fa fa-minus"></i>Remove Field</a>
+                    </div>
+                    <script src="script.js"></script>
+                </div>
+            </div>
+            <div class="languages-section">
+                <h2>LANGUAGES</h2>
+                <hr>
+                <form id="languagesForm">
+                    <div id="languagesContainer">
+                        <!-- Languages will be added here dynamically -->
+                    </div>
+                    <button type="button" id="addLanguageBtn">+ Add Language</button>
+                    <button type="submit">Save Languages</button>
+                </form>
+                <script src="languages.js"></script>
+            </div>
+        </div>
+        <!--Right side-->
+        <div class="right-side">
+            <div class="ntitle">
+                <div class="fntitle"><span class="FN">OMAR</span> <span class="SN">AHMADOV</span></div>
+                <div class="jtitle">NETWORK SECURITY ENGINEER</div>
+            </div>
+            <div class="section">
+                <h2 class="section-title">PROFILE</h2>
+                <button class="dropdown-button" onclick="toggleDropdown()">Show/Hide Profile</button>
+                <button class="edit-button" onclick="enableEditing()">Edit Profile</button>
+                <button class="add-button" onclick="addNewContent()">Add Content</button>
+                <hr class="line">
+                <div id="profileContent" class="dropdown_content">
+                    <!-- Content will be loaded dynamically from JavaScript -->
+                </div>
+            </div>
+            <script src="profile.js"></script>
+            <div class="section">
+                    <h2 class="section-title">WORK EXPERIENCE</h2>
+                    <hr class="line">
+                <div class="section-we">
+                    <div class="wrapper-1">
+                    <div id="education_options">
+                        <input type="dum" name="education_options[]" class="education_option" size="50" placeholder="Another Field">
+                    </div>
+                    <div class="controls">
+                        <a href="#" id="add_morefields"><i class="fa fa-plus"></i>Add More</a>
+                        <a href="#" id="remove__fields"><i class="fa fa-minus"></i>Remove Field</a>
+                    </div>
+                    <script src="work.js"></script>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h2 class="section-title">REFERENCES</h2>
+                <button class="dropdown-button" onclick="toggleRefDropdown()">Show/Hide References</button>
+                <button class="edit-button" onclick="enableRefEditing()">Edit References</button>
+                <button class="add-button" onclick="addNewReference()">Add Reference</button>
+                <hr>
+                <div id="referenceContent" class="dropdown_content">
+                    <!-- Content will be loaded dynamically from JavaScript -->
+                </div>
+            </div>
+            <script src="references.js"></script>
+        </div>
+    </div>
+</body>
+</html>
